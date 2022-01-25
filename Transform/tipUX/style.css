@@ -1,0 +1,15 @@
+.circle{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: crimson;
+    align-items: center;
+    justify-content: center;
+    transition: transform 3s linear;
+}
+
+.container:hover .circle{
+    transform: translateX(200px);
+    transition: transform 1s linear;
+}   

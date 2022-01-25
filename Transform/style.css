@@ -1,0 +1,273 @@
+.transformation{
+    display: flex;
+    margin-bottom: 50px;
+}
+.shadow{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: wheat;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+
+.circle:hover{
+    transform: translate(20px, 0px);
+}
+
+
+/********************************shadow1-scale**********/
+
+.shadow1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 0px 25px;
+    background-color: cyan;
+}
+
+.circle1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: slateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.5s;
+}
+
+.circle1:hover{
+    transform: scale(0.8);
+}
+
+/* ************************shadow2-skew************** */
+
+.shadow2{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 0px 25px;
+    background-color: rgb(204, 255, 146);
+}
+
+.circle2{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgb(41, 124, 8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s;
+}
+
+.circle2:hover{
+    transform: skewX(20deg); /*deg es la medida de angulo*/
+}
+
+/* ************************shadow2-rotate************** */
+
+.shadow3{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 0px 25px;
+    background-color: rgb(157, 255, 0);
+}
+
+.circle3{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgb(211, 55, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+
+.circle3:hover{
+    transform: rotate(50deg);
+}
+
+/* *************************Transform-origin************* */
+
+.shadow4{
+    width: 100px;
+    height: 100px;
+
+    margin: 0px 25px;
+    background-color: rgb(215, 218, 255);
+}
+
+.square4{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(61, 64, 114);
+    transform-origin: right bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s;
+}
+
+.square4:hover{
+    transform: rotate(80deg);
+}
+
+/* *******************************TRANSFORMACIONES 3D*************************** */
+
+.shadow3D{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 50px;
+    border: 3px solid rgb(238, 126, 34);
+    perspective: 100px; /*Le estamos indicando la profundiad del contenedor*/
+}
+
+.item{
+    display: flex;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid aqua;
+    background: papayawhip;
+    opacity: 0.8;
+    transform-style: preserve-3d;
+    /* transform: rotateX(20deg); */
+    align-items: center;
+    justify-content: center;
+    transition: transform 1.5s;
+}
+
+.item:hover{
+    transform: rotateX(30deg);
+}
+
+
+/* ******************backface-visivility**************** */
+
+.card{
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 2s;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face.front{
+    background: rgb(238, 85, 110);
+}
+
+.face.back{
+    background: papayawhip;
+    transform: rotateY(180deg);
+}
+
+/* ********************************TRANSITION************************************* */
+
+.container{
+    width: 400px;
+    height: 100px;
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+}
+
+.container:hover .box{
+    transform: scale(0.4);
+}
+
+.box.one{
+    background-color: red;
+    transition: transform 1s;
+}
+
+.box.two{
+    background-color: cornflowerblue;
+    transition: transform 1.5s;
+}
+
+.box.three{
+    background-color: green;
+    transition: transform 1s;
+}
+
+/* ********************TIME FUNTION******************* */
+
+.time-funtion{
+    display: flex;
+}
+
+.time-funtion:hover .tf-box{
+    transform: translateY(200px);
+}
+
+.tf-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 8px;
+}
+
+.tf-box.box-one{
+    background-color: brown;
+    transition: transform 1s linear;
+    transition-delay: 0.5s;
+}
+
+.tf-box.box-two{
+    background-color: aqua ;
+    transition: transform 1s ease;
+    transition-delay: 0.5s;
+}
+.tf-box.box-three{
+    background-color: mediumseagreen;
+    transition: transform 1s ease-in;
+    transition-delay: 0.5s;
+}
+.tf-box.box-four{
+    background-color: greenyellow;
+    transition: transform 1s ease-out;
+    transition-delay: 0.5s;
+}
+.tf-box.box-five{
+    background-color: lightcoral;
+    transition: transform 1s ease-in-out;
+    transition-delay: 0.5s;
+}
+.tf-box.box-six{
+    background-color: rgb(41, 124, 8);
+    transition: transform 1s cubic-bezier(.17,.67,.71,.35);
+    transition-delay: 0.5s;
+}
