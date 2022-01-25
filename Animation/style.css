@@ -13,7 +13,8 @@ body{
     border-radius: 40px;
     border: 8px solid black;
     box-shadow: 0 19px 38px  rgba(0, 0, 0, 0.30), 0 15px 12px  rgba(0, 0, 0, 0.22); 
-    background: rgb(211, 230, 251);
+    background: rgb(144, 180, 221);
+    cursor: pointer;
 }
 
 .leyer-1{
@@ -21,7 +22,6 @@ body{
     z-index: 1;
     height: 400px;
     width: 70px;
-    background: rosybrown;
     right: 60px;
     bottom: 0;
 }
@@ -30,7 +30,6 @@ body{
     z-index: 2;
     height: 400px;
     width: 70px;
-    background: slateblue;
     bottom: 0;
     left: 60px;
 }
@@ -42,7 +41,6 @@ body{
     margin: 0 auto;
     height: 350px;
     width: 250px;
-    background: crimson;
     bottom: 0;
 
 }
@@ -51,7 +49,6 @@ body{
     z-index: 4;
     height: 300px;
     width: 70px;
-    background: yellowgreen;
     bottom: 0;
     left: 60px;
 }
@@ -59,8 +56,7 @@ body{
     position: absolute;
     z-index: 5;
     height: 250px;
-    width: 210px;
-    background: brown;
+    width: 200px;
     bottom: 0;
 }
 .leyer-6{
@@ -68,7 +64,6 @@ body{
     z-index: 6;
     width: 70px;
     height: 200px;
-    background: blueviolet;
     bottom: 0;
     right: 35px;
 }
@@ -77,16 +72,14 @@ body{
     z-index: 7;
     height: 150px;
     width: 150px;
-    background: red;
     bottom: 0;
     right: 0;
 }
 .leyer-8{
     position: absolute;
     z-index: 8;
-    height: 80px;
-    width: 120px;
-    background: rosybrown;
+    height: 100px;
+    width: 250px;
     bottom: 0;
     right: 0;
     left: 0;
@@ -95,23 +88,21 @@ body{
 .leyer-9{
     position: absolute;
     z-index: 9;
-    height: 70px;
+    height: 80px;
     width: 120px;
-    background: papayawhip;
     bottom: 0;
     left: 0;
 }
 .leyer-10{
     position: absolute;
     z-index: 10;
-    height: 70px;
+    height: 80px;
     width: 120px;
-    background: papayawhip;
     bottom: 0;
     right: 0;
 }
 
-/* *********************EAR************* */
+/* *********************Leyer 1************* */
 .left-ear-outer{
     background: white;
     border-radius: 90%;
@@ -160,4 +151,140 @@ body{
     margin: 0 auto;
     top: 30px;
     background: white;
+}
+
+.head__eye{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: gray;
+    top: 15px;
+}
+
+.head__eye.head__eye--left{
+    left: 23px;
+}
+
+.head__eye.head__eye--right{
+    right: 23px;
+}
+
+/* *********************Leyer 3************* */
+
+.square-main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: rgb(62, 95, 4);
+    box-shadow: 0 8px 15px rgb(0, 0, 0);
+}
+
+.leyer-5 .square-main{
+    border-bottom-left-radius: 30px;
+}
+
+.leyer-7 .square-main{
+    border-bottom-right-radius: 30px;
+}
+
+.brown__zigzag{
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: 
+    linear-gradient(-45deg, transparent 33.33%, darkred 33.33%, darkred 66.66%, transparent 66.66% ),
+    linear-gradient(45deg, transparent 33.33%, darkred 33.33%, darkred 66.66%, transparent 66.66% );
+    background-size: 30px 80px;
+    transform: rotate(180deg);
+}
+
+.dark__green__zigzag{
+    width: 100%;
+    height: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: 
+    linear-gradient(-45deg, transparent 33.33%, #0b700b 33.33%, #0b700b 66.66%, transparent 66.66% ),
+    linear-gradient(45deg, transparent 33.33%, #0b700b 33.33%, #0b700b 66.66%, transparent 66.66% );
+    background-size: 30px 80px;
+    transform: rotate(180deg);
+}
+
+.cloud-one{
+    position: absolute;
+    width: 100px; 
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(177, 163, 141);
+    border-radius: 60px 60px 0 0;
+}
+
+.cloud-two{
+    position: absolute;
+    width: 100px; 
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(177, 163, 141);
+    border-radius: 50px 50px 0 0  ;
+}
+
+.cloud-three{
+    position: absolute;
+    width: 100px; 
+    height: 80%;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(177, 163, 141);
+    border-radius: 50px 50px 0 0;
+}
+
+/* *********************Leyer 9************* */
+
+.cloud-one-left{
+    width: 80px;
+    height: 100%;
+    border-radius: 40px 40px 0 30px;
+    background: white;
+    left: 0;
+    position: absolute;
+}
+
+.cloud-two-left{
+    position: absolute;
+    width: 40px;
+    height: 60%;
+    border-radius: 0 40px 30px 0;
+    background: white;
+    bottom: 0;
+    left: 80px;
+}
+
+/* *********************Leyer 10************* */
+
+.cloud-one-rigth{
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    border-radius: 45px 45px 30px 0px;
+    background-color: white;
+    right: 0;
+}
+
+.cloud-two-rigth{
+    position: absolute;
+    width: 40px;
+    height: 60%;
+    border-radius: 40px 0px 0px 30px;
+    background: white;
+    bottom: 0;
+    left: 0;
 }
